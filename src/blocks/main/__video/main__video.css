@@ -1,0 +1,11 @@
+.main__video {
+  width: 480px;
+  height: 270px;
+}
+
+@media screen and (max-width: 700px) {
+  .main__video {
+    width: 280px;
+    height: 157px;
+  }
+}

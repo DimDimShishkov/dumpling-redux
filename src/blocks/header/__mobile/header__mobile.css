@@ -1,0 +1,18 @@
+.header__mobile {
+  display: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  background: none;
+  position: relative;
+}
+
+@media screen and (max-width: 900px) {
+  .header__mobile {
+    display: block;
+  }
+}

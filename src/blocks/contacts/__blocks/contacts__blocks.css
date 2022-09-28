@@ -1,0 +1,6 @@
+.contacts__blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}

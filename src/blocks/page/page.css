@@ -1,0 +1,19 @@
+.page {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  min-width: 320px;
+  width: 100%;
+  max-width: 1240px;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif, Arial;
+  color: #fff;
+  text-rendering: optimizeLegibility;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  background: url(../../images/experiment1.jpg) center no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  background-attachment: fixed;
+}

@@ -1,0 +1,13 @@
+.contacts__link {
+  font-size: 18px;
+    line-height: 20px;
+    font-weight: 500;
+    color: #f9fbfa;
+}
+
+@media screen and (max-width: 600px) {
+  .contacts__link {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}

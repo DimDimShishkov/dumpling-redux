@@ -1,0 +1,13 @@
+.contacts__subtitle {
+  font-size: 18px;
+    line-height: 20px;
+    font-weight: 500;
+    margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+  .contacts__subtitle {
+    font-size: 13px;
+    line-height: 15px;
+  }
+}

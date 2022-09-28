@@ -1,0 +1,32 @@
+.header__menu {
+  display: block;
+  position: absolute;
+  top: 22px;
+  left: 10px;
+  right: 10px;
+  background: rgb(255, 255, 255);
+  height: 6px;
+  transition: all .3s ease;
+}
+
+.header__menu:before {
+  top: 10px;
+  display: block;
+  position: absolute;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  height: 6px;
+  content: "";
+  transition: all .3s ease;
+}
+
+.header__menu:after {
+  bottom: 10px;
+  display: block;
+  position: absolute;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  height: 6px;
+  content: "";
+  transition: all .3s ease;
+}

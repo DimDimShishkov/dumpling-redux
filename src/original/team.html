@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./pages/index.css" />
+    <title>Кафе Хинкальная</title>
+  </head>
+  <body class="page">
+    <header class="header">
+      <a href="#" class="header__logo"></a>
+      <nav class="header__nav">
+        <ul class="header__links">
+          <li class="header__link header__link_selected">Главная</li>
+          <li class="header__link">О нас</li>
+          <li class="header__link">Забронировать стол</li>
+          <li class="header__link">Наша команда</li>
+          <li class="header__link">Меню</li>
+          <li class="header__link">Галерея</li>
+          <li class="header__link">Контакты</li>
+          <li class="header__link">Галерея</li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content">
+      <article class="content__description">
+        <h1 class="main__title">Хинкальная на Ленина</h1>
+        <p class="main__description">Хинкальная на Ленина это уютный ресторан в самом центре города. 
+          Вас ждет живая музыка со вторника по воскресенье с 21:00 а тихая и уютная атмосфера с панорамными окнами порадуют всегда.
+          В меню представлен широкий выбор традиционной грузинской и европейской кухни. Большая винная и чайная карты.
+          </p>
+      </article>
+      <video src="#" class="video__main"></video>
+    </main>
+    
+    <section class="profile">
+      <img src="./images/avatar.jpg" alt="аватар" class="profile__avatar" />
+      <div class="profile__info">
+        <div class="profile__main">
+          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <button class="profile__edit-button" type="button"></button>
+        </div>
+        <p class="profile__description">Исследователь океана</p>
+      </div>
+      <button class="profile__add-button" type="button"></button>
+    </section>
+
+    <section class="elements"></section>
+
+    <footer class="footer">
+      <p class="footer__copyright">© 2022 DimDim</p>
+    </footer>
+
+    <div class="popup popup_type_info">
+      <div class="popup__container popup__container_type_info">
+        <h2 class="popup__title">Редактировать профиль</h2>
+        <form
+          class="popup__form popup__form_type_info"
+          name="profile__informacion"
+        >
+          <input
+            required
+            type="text"
+            class="popup__info popup__info_value_name"
+            placeholder="Введите имя профиля"
+            name="edit_name"
+          />
+          <input
+            required
+            type="text"
+            class="popup__info popup__info_value_description"
+            placeholder="Введите описание профиля"
+            name="edit_description"
+          />
+          <button
+            type="submit"
+            class="popup__submit-button popup__submit-button_type_info"
+          >
+            Сохранить
+          </button>
+        </form>
+        <button
+          class="popup__exit-button"
+          type="button"
+        ></button>
+      </div>
+    </div>
+
+    <div class="popup popup_type_images">
+      <div class="popup__container popup__container_type_images">
+        <h2 class="popup__title">Новое место</h2>
+        <form
+          class="popup__form popup__form_type_images"
+          name="element__informacion"
+        >
+          <input
+            required
+            type="text"
+            class="popup__info popup__info_value_name"
+            placeholder="Название"
+            name="edit_text"
+          />
+          <input
+            required
+            type="text"
+            class="popup__info popup__info_value_description"
+            placeholder="Ссылка на картинку"
+            name="edit_image"
+          />
+          <button
+            type="submit"
+            class="popup__submit-button popup__submit-button_type_images"
+          >
+            Сохранить
+          </button>
+        </form>
+        <button
+          class="popup__exit-button"
+          type="button"
+        ></button>
+      </div>
+    </div>
+
+    <div class="popup popup_type_image">
+      <div class="popup__looking">
+        <img src=" " alt="" class="popup__image" />
+        <button
+          class="popup__exit-button"
+          type="button"
+        ></button>
+        <h2 class="popup__description"></h2>
+      </div>
+    </div>
+
+    <template id="image-template">
+      <article class="element">
+        <img src=" " alt="" class="element__image" />
+        <div class="element__title">
+          <h2 class="element__text"></h2>
+          <button class="element__like" type="button"></button>
+        </div>
+        <button class="element__remove" type="submit"></button>
+      </article>
+    </template>
+
+    <script defer src="./scripts/index.js"></script>
+  </body>
+</html>

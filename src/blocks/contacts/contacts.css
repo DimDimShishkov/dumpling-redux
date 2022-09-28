@@ -1,0 +1,14 @@
+.contacts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  .contacts {
+    flex-direction: column;
+  }
+}
