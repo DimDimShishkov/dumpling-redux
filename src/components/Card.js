@@ -1,28 +1,23 @@
 import React from 'react';
 
-function Card({ onCardClick, card }) {
-  const { description, price, title, weight, image } = card;
+function Card({ onCardClick, card, addToCart }) {
+  const { price, title, weight, image } = card;
 
   function handleClick() {
     onCardClick(card);
   }
 
   return (
-    <article className="menu__item">
-        <p className="menu__item_title">{title}</p>
-      <img src={image} alt={title} onClick={handleClick} className="menu__item_image" />
-      <div className="menu__item_content">
-      <button className='menu__cart-button'>В корзину</button>
-        <div className="menu__item_total">
-          <p className="menu__item_price">
-            <span className="price_rub">{price}</span>P
-          </p>
-          <p className="menu__item_weight">
-            / <span className="weight_gr">{weight}</span>гр
-          </p>
+    <article className="card">
+      <p className="card__title">{title}</p>
+      <img src={image} alt={title} onClick={handleClick} className="card__image" />
+      <div className="card__content">
+        <button className="card__cart-button" onClick={addToCart}>В корзину</button>
+        <div className="card__total">
+          <p className="card__price">{price}Р</p>
+          <p className="card__weight">/{weight}гр</p>
         </div>
       </div>
-
     </article>
   );
 }

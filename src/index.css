@@ -33,3 +33,11 @@
 @import url(./blocks/contacts/__iframe/contacts__iframe.css);
 @import url(./blocks/menu/menu.css);
 
+@import url(./blocks/card/card.css);
+
+@import url(./blocks/popup/popup.css);
+@import url(./blocks/popup/_opened/popup_opened.css);
+@import url(./blocks/popup/__looking/popup__looking.css);
+@import url(./blocks/popup/__image/popup__image.css);
+@import url(./blocks/popup/__exit-button/popup__exit-button.css);
+@import url(./blocks/popup/__description/popup__description.css);

@@ -28,6 +28,14 @@ class Api {
       }).then((res) => this._handleReturn(res));    
   }
 
+      // Загрузка карточек HotDishes с сервера
+      handleDownloadSupes() {
+        return fetch(`${this._url}/Supes.json`, {
+          method: "GET",
+          headers: this._headers,
+        }).then((res) => this._handleReturn(res));    
+    }
+
 }
 
 export const api = new Api({
