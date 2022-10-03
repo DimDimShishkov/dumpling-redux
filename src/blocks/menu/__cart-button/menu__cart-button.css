@@ -1,0 +1,16 @@
+.menu__cart-button {
+  background-image: url(../../../images/shoppingCartWhite.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu__cart-button:hover {
+  opacity: 0.6;
+}

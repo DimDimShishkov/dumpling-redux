@@ -29,23 +29,26 @@ function Menu() {
       .finally(() => setLoading(false));
   }, []);
 
-  function handleClick(card) {
-    console.log(card)
+  const handleClick = (card) => {
     setSelectedCard(card);
   }
 
-  function closePopups() {
+  const closePopups = () => {
     setSelectedCard(null)
   }
+
+  const handleAddItemToCart = (item) => {
+    dispatch(addToCart(item))
+  };
 
   return (
     <section className="main">
       <div className="menu">
-        <div className="menu__cart-container">
-          <button className="menu__cart-button" type="button" onClick={null}></button>
+        <div className="menu__cart-container" onClick={null}>
+          <button className="menu__cart-button" type="button" ></button>
           <div className="menu__cart-text">
-            <p className="menu__heading">{items ? `В корзине ${items.length} картинок` : 'В корзине нет картинок'}</p>
-            <p className="menu__subheading">{null ? `К оплате ${null} лайков` : ''}</p>
+            <p className="menu__cart-heading">{items ? `Позиций в корзине ${items.length}` : 'В корзине нет картинок'}</p>
+            <p className="menu__cart-subheading">{items ? `К оплате ${items.length} лайков` : ''}</p>
           </div>
         </div>
         {loading ? (
@@ -68,7 +71,7 @@ function Menu() {
               <div className={`menu__accordion-content ${isOpenAccordion && 'menu__accordion-content_active'}`}>
                 {items[0] &&
                   items[0].HotDishes.map((card) => (
-                    <Card card={card} key={card.id} onCardClick={handleClick} addToCart={addToCart} />
+                    <Card card={card} key={card.id} onCardClick={handleClick} addToCart={handleAddItemToCart} />
                   ))}
               </div>
             </div>

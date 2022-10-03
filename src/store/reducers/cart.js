@@ -1,5 +1,5 @@
 const initialState = {
-  items: {},
+  items: [],
   totalPrice: 0,
   totalCount: 0,
 };

@@ -1,0 +1,18 @@
+.menu__select-heading {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+@media screen and (max-width: 660px) {
+  .menu__select-heading {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  
+}
