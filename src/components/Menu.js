@@ -7,6 +7,8 @@ import { setItems } from '../store/actions/items';
 import { addToCart } from '../store/actions/cart';
 import Accordion from './Accordion';
 import PopupWithImage from './PopupWithImage';
+import PopupWithCart from './PopupWithCart';
+
 
 function Menu() {
   const dispatch = useDispatch();
@@ -16,6 +18,8 @@ function Menu() {
   const [isOpenAccordion, setOpenAccordion] = useState(null);
   const [loading, setLoading] = useState(true);
   const [selectedCard, setSelectedCard] = useState(null);
+  const [isOpenCart, setOpenCart] = useState(null);
+  const { totalPrice, totalCount } = useSelector(({ cart }) => cart);
 
   useEffect(() => {
     api
@@ -31,24 +35,29 @@ function Menu() {
 
   const handleClick = (card) => {
     setSelectedCard(card);
-  }
+  };
 
   const closePopups = () => {
-    setSelectedCard(null)
-  }
+    setSelectedCard(null);
+    setOpenCart(false);
+  };
 
   const handleAddItemToCart = (item) => {
-    dispatch(addToCart(item))
+    dispatch(addToCart(item));
+  };
+
+  const handleOpenCart = () => {
+    setOpenCart(true);
   };
 
   return (
     <section className="main">
       <div className="menu">
-        <div className="menu__cart-container" onClick={null}>
-          <button className="menu__cart-button" type="button" ></button>
+        <div className="menu__cart-container" onClick={handleOpenCart}>
+          <button className="menu__cart-button" type="button"></button>
           <div className="menu__cart-text">
-            <p className="menu__cart-heading">{items ? `Позиций в корзине ${items.length}` : 'В корзине нет картинок'}</p>
-            <p className="menu__cart-subheading">{items ? `К оплате ${items.length} лайков` : ''}</p>
+            <p className="menu__cart-heading">{items ? `Позиций в корзине ${totalCount}` : 'В корзине нет картинок'}</p>
+            <p className="menu__cart-subheading">{items ? `К оплате ${totalPrice} рублей` : ''}</p>
           </div>
         </div>
         {loading ? (
@@ -79,7 +88,8 @@ function Menu() {
         )}
       </div>
 
-      <PopupWithImage card={selectedCard} closePopup={closePopups}/>
+      <PopupWithImage card={selectedCard} closePopup={closePopups} />
+      <PopupWithCart isOpen={isOpenCart} closePopup={closePopups} handleAddItemToCart={handleAddItemToCart}/>
     </section>
   );
 }

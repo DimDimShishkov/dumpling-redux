@@ -22,16 +22,16 @@ const getTotalSum = (obj, path) => {
 
 const cart = (state = initialState, action) => {
   switch (action.type) {
-    case 'ADD_PIZZA_CART': {
-      const currentPizzaItems = !state.items[action.payload.id]
+    case 'ADD_ITEM_CART': {
+      const currentFoodItems = !state.items[action.payload.id]
         ? [action.payload]
         : [...state.items[action.payload.id].items, action.payload];
 
       const newItems = {
         ...state.items,
         [action.payload.id]: {
-          items: currentPizzaItems,
-          totalPrice: getTotalPrice(currentPizzaItems),
+          items: currentFoodItems,
+          totalPrice: getTotalPrice(currentFoodItems),
         },
       };
 
@@ -62,11 +62,11 @@ const cart = (state = initialState, action) => {
     }
 
     case 'PLUS_CART_ITEM': {
-      const newObjItems = [
+         /*  const newObjItems = [
         ...state.items[action.payload].items,
         state.items[action.payload].items[0],
       ];
-      const newItems = {
+  const newItems = {
         ...state.items,
         [action.payload]: {
           items: newObjItems,
@@ -77,6 +77,36 @@ const cart = (state = initialState, action) => {
       const totalCount = getTotalSum(newItems, 'items.length');
       const totalPrice = getTotalSum(newItems, 'totalPrice');
 
+      console.log(action)
+      console.log(totalCount)
+      console.log(totalPrice) 
+      console.log(...state.items)
+      console.log(action.payload.id)
+      
+      return {
+        ...state,
+        items: newItems,
+        totalCount,
+        totalPrice,
+      }; */
+      const currentFoodItems = !state.items[action.payload.id]
+        ? [action.payload]
+        : [...state.items[action.payload.id].items, action.payload];
+
+        const biba = [...state.items[action.payload.id].items, action.payload]
+
+        const newItems = {
+          ...state.items,
+          [action.payload]: {
+            items: biba,
+            totalPrice: getTotalPrice(biba),
+          },
+        };
+
+        const totalCount = getTotalSum(newItems, 'items.length');
+        const totalPrice = getTotalSum(newItems, 'totalPrice');
+
+      console.log(...state.items[action.payload.id].items)
       return {
         ...state,
         items: newItems,
@@ -86,7 +116,7 @@ const cart = (state = initialState, action) => {
     }
 
     case 'MINUS_CART_ITEM': {
-      const oldItems = state.items[action.payload].items;
+      const oldItems = [...state.items[action.payload.id].items, action.payload];
       const newObjItems =
         oldItems.length > 1 ? state.items[action.payload].items.slice(1) : oldItems;
       const newItems = {

@@ -1,0 +1,17 @@
+.popup__empty-image {
+  background-image: url(../../../images/emptycart.png);
+  width: 200px;
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  align-self: center;
+}
+
+.popup__empty-text {
+  align-self: center;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 16px;
+}
