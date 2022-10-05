@@ -52,7 +52,7 @@ function Menu() {
   const handleOpenCart = () => {
     setOpenCart(true);
   };
-
+  
   return (
     <section className="main">
       <div className="menu">
@@ -63,36 +63,25 @@ function Menu() {
             <p className="menu__cart-subheading">{items ? `К оплате ${totalPrice} рублей` : ''}</p>
           </div>
         </div>
+        
         {loading ? (
           <Loading />
         ) : (
           <div className="menu__accordion">
             <Accordion
               title={'Горячие блюда'}
-              cards={items[0] && items[0].HotDishes}
-              addToCart={addToCart}
+              cards={items[0].HotDishes}
               onCardClick={handleClick}
-              load={items[0]}
+              addToCart={handleAddItemToCart}
+              removeFromCart={handleRemoveItemFromCart}
             />
-            <Accordion title={'Супы'} cards={items} addToCart={addToCart} onCardClick={handleClick} load={items[0]} />
-            <div className="menu__accordion-item">
-              <div className="menu__accordion-head" onClick={() => setOpenAccordion(!isOpenAccordion)}>
-                <h2 className="menu__accordion-title">test</h2>
-                <div className={`menu__accordion-button ${isOpenAccordion && 'menu__accordion-button_active'}`}></div>
-              </div>
-              <div className={`menu__accordion-content ${isOpenAccordion && 'menu__accordion-content_active'}`}>
-                {items[0] &&
-                  items[0].HotDishes.map((card) => (
-                    <Card
-                      card={card}
-                      key={card.id}
-                      onCardClick={handleClick}
-                      addToCart={handleAddItemToCart}
-                      removeFromCart={handleRemoveItemFromCart}
-                    />
-                  ))}
-              </div>
-            </div>
+{/*             <Accordion
+              title={'Супы'}
+              cards={items[0].Soup}
+              onCardClick={handleClick}
+              addToCart={handleAddItemToCart}
+              removeFromCart={handleRemoveItemFromCart}
+            /> */}
           </div>
         )}
       </div>
