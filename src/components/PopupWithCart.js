@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { clearCart, removeCartItem, plusCartItem, minusCartItem } from '../store/actions/cart';
+import { clearCart, removeCartItem, plusCartItem, minusCartItem, addToCart } from '../store/actions/cart';
 import CartItem from './CartItem';
 
 function PopupWithCart({ isOpen, closePopup, handleAddItemToCart }) {
   const dispatch = useDispatch();
   const { totalPrice, totalCount, items } = useSelector(({ cart }) => cart);
   const [buttonsCondition, setEnabled] = useState(false);
-
-  useEffect(() => {}, [items]);
 
   function handleClosePopup(evt) {
     if (
@@ -20,8 +18,8 @@ function PopupWithCart({ isOpen, closePopup, handleAddItemToCart }) {
     }
   }
 
-  const addedPizzas = Object.keys(items).map((key) => {
-    return items[key].items[0];
+  const addedItems = Object.keys(items).map((key) => {
+      return items[key].items[0];
   });
 
   const onClearCart = () => {
@@ -37,8 +35,7 @@ function PopupWithCart({ isOpen, closePopup, handleAddItemToCart }) {
   };
 
   const onPlusItem = (item) => {
-    handleAddItemToCart(item)
-   // dispatch(plusCartItem(item));
+   dispatch(addToCart(item));
   };
 
   const onMinusItem = (item) => {
@@ -51,8 +48,6 @@ function PopupWithCart({ isOpen, closePopup, handleAddItemToCart }) {
 
   function handleSubmit(evt) {
     evt.preventDefault();
-    console.log(addedPizzas);
-    addedPizzas.map((item) => console.log(item));
   }
   /*   function handleTotal(itemID) {
     return props.cards.filter((i) => i._id == itemID).length;
@@ -70,7 +65,7 @@ function PopupWithCart({ isOpen, closePopup, handleAddItemToCart }) {
           <>
             {' '}
             <ul className="popup__items">
-              {addedPizzas.map((item) => (
+              {addedItems.map((item) => (
                 <CartItem
                   item={item}
                   key={item.id}

@@ -18,7 +18,7 @@
   .popup__exit-button {
     background: url(../../../images/CloseIconMobile.svg) center no-repeat;
     top: -34px;
-    right: 0;
+    right: 10px;
     width: 20px;
     height: 20px;
   }

@@ -1,17 +1,6 @@
 import React from 'react';
 
 function CartItem({ item, removeItem, plusItem, minusItem, price, total }) {
-  const handleRemoveItem = (id) => {
-    removeItem(id)
-  };
-
-  const handlePlusItem = (item) => {
-    plusItem(item)
-  };
-
-  const handleMinusItem = (item) => {
-    minusItem(item);
-  };
 
   return (
     <li key={item._id} className="popup__card-item">

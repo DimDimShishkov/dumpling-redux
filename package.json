@@ -1,6 +1,7 @@
 {
   "name": "dunplings",
   "version": "0.1.0",
+  "homepage": "https://dimdimshishkov.github.io/dumpling-redux/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",

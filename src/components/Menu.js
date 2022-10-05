@@ -4,11 +4,10 @@ import { api } from './api';
 import Card from './Card';
 import Loading from './Loading';
 import { setItems } from '../store/actions/items';
-import { addToCart } from '../store/actions/cart';
+import { addToCart, minusCartItem } from '../store/actions/cart';
 import Accordion from './Accordion';
 import PopupWithImage from './PopupWithImage';
 import PopupWithCart from './PopupWithCart';
-
 
 function Menu() {
   const dispatch = useDispatch();
@@ -46,6 +45,10 @@ function Menu() {
     dispatch(addToCart(item));
   };
 
+  const handleRemoveItemFromCart = (item) => {
+    dispatch(minusCartItem(item));
+  };
+
   const handleOpenCart = () => {
     setOpenCart(true);
   };
@@ -80,7 +83,13 @@ function Menu() {
               <div className={`menu__accordion-content ${isOpenAccordion && 'menu__accordion-content_active'}`}>
                 {items[0] &&
                   items[0].HotDishes.map((card) => (
-                    <Card card={card} key={card.id} onCardClick={handleClick} addToCart={handleAddItemToCart} />
+                    <Card
+                      card={card}
+                      key={card.id}
+                      onCardClick={handleClick}
+                      addToCart={handleAddItemToCart}
+                      removeFromCart={handleRemoveItemFromCart}
+                    />
                   ))}
               </div>
             </div>
@@ -89,7 +98,7 @@ function Menu() {
       </div>
 
       <PopupWithImage card={selectedCard} closePopup={closePopups} />
-      <PopupWithCart isOpen={isOpenCart} closePopup={closePopups} handleAddItemToCart={handleAddItemToCart}/>
+      <PopupWithCart isOpen={isOpenCart} closePopup={closePopups} handleAddItemToCart={handleAddItemToCart} />
     </section>
   );
 }
