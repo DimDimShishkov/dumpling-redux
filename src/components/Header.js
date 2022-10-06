@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Header() {
+function Header({pageState}) {
   const [burger, openBurger] = React.useState(false);
 
   function handleOpenBurger() {
     openBurger(!burger);
+    pageState()
   }
 
   return (

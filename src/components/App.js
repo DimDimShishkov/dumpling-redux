@@ -10,10 +10,13 @@ import NoPage from './NoPage';
 function App() {
   const [pageBlock, setPageBlock] = useState(false);
 
+  const handlePageState = () => {
+    setPageBlock(!pageBlock)
+  }
 
   return (
     <div className={`page ${pageBlock && 'page_active'}`}>
-      <Header />
+      <Header pageState={handlePageState}/>
       <Routes>
 
         <Route exact path="/dumpling-redux" element={<><Main /> <Footer /></>}></Route>
