@@ -18,25 +18,27 @@ function Header() {
         </button>
 
         <nav className={`header__nav ${burger && 'header__nav_selected'}`}>
+          <div className="header__overlay" onClick={handleOpenBurger}>
           <div className="header__links">
-            <Link to="/" className="header__link">
+            <Link to="/dumpling-redux" className="header__link">
               Главная
             </Link>
-            <Link to="/about-us" className="header__link">
+            <Link to="/dumpling-redux/about-us" className="header__link">
               О нас
             </Link>
-            <Link to="/our-team" className="header__link">
+            <Link to="/dumpling-redux/our-team" className="header__link">
               Наша команда
             </Link>
-            <Link to="/menu" className="header__link">
+            <Link to="/dumpling-redux/menu" className="header__link">
               Меню
             </Link>
-            <Link to="/gallery" className="header__link">
+            <Link to="/dumpling-redux/gallery" className="header__link">
               Галерея
             </Link>
-            <Link to="/contacts" className="header__link">
+            <Link to="/dumpling-redux/contacts" className="header__link">
               Контакты
             </Link>
+          </div>
           </div>
         </nav>
       </div>

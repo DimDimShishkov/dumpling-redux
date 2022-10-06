@@ -8,6 +8,7 @@
 @import url(./blocks/header/__mobile/header__mobile.css);
 @import url(./blocks/header/__menu/header__menu.css);
 @import url(./blocks/header/__menu/themes/header__menu_selected.css);
+@import url(./blocks/header/__overlay/header__overlay.css);
 @import url(./blocks/header/__nav/header__nav.css);
 @import url(./blocks/header/__nav/themes/header__nav_selected.css);
 @import url(./blocks/header/__links/header__links.css);

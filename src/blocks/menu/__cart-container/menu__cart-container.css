@@ -4,4 +4,6 @@
   justify-content: flex-end;
   gap: 20px;
   margin: 10px;
+  margin-left: auto;
+  width: 210px;
 }
