@@ -1,0 +1,11 @@
+.popup__card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media screen and (max-width: 460px) {
+  .popup__card-text {
+    gap: 5px;
+  }
+}

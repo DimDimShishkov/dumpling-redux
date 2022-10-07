@@ -13,13 +13,23 @@ class Api {
   }
 
   // Загрузка всего с сервера
-  handleDownloadAll() {
+  handleDownloadAll() { // chfnge naming
       return fetch(`${this._url}/.json`, {
         method: "GET",
         headers: this._headers,
       }).then((res) => this._handleReturn(res));    
   }
 
+    // Тестирование для listenerMiddleware
+    downloadMenuFromServer() { 
+      return fetch(`${this._url}/Menu.json`, {
+        method: "GET",
+        headers: this._headers,
+      }).then((res) => this._handleReturn(res))
+      .then((res) => {return res})
+      .catch((err) => {console.log(err);})
+  }
+  
     // Загрузка карточек HotDishes с сервера
     handleDownloadHotDishes() {
       return fetch(`${this._url}/HotDishes.json`, {

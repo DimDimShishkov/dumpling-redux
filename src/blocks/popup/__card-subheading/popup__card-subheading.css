@@ -1,0 +1,11 @@
+.popup__card-subheading {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 460px) {
+  .popup__card-subheading {
+    font-size: 12px;
+  }
+}

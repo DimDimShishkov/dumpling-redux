@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { clearCart, removeCartItem, plusCartItem, minusCartItem, addToCart } from '../store/actions/cart';
+import { clearCart, removeCartItem, minusCartItem, addToCart } from '../store/actions/cart';
 import CartItem from './CartItem';
 
-function PopupWithCart({ isOpen, closePopup, handleAddItemToCart }) {
+function PopupWithCart({ isOpen, closePopup }) {
   const dispatch = useDispatch();
-  const { totalPrice, totalCount, items } = useSelector(({ cart }) => cart);
-  const [buttonsCondition, setEnabled] = useState(false);
-
-  function handleClosePopup(evt) {
+  const { totalPrice, totalCount, cartItems } = useSelector(({ cart }) => cart);
+  
+  function handleClosePopup(evt) { // переписать без обращения к DOM 
     if (
       evt.key === 'Escape' ||
       evt.target.classList.contains('popup_opened') ||
@@ -18,15 +17,16 @@ function PopupWithCart({ isOpen, closePopup, handleAddItemToCart }) {
     }
   }
 
-  const addedItems = Object.keys(items).map((key) => {
-      return items[key].items[0];
+  const addedItems = Object.keys(cartItems).map((key) => {
+      return cartItems[key].cartItems[0];
   });
 
+/*   // удалить все элементы из корзины
   const onClearCart = () => {
     if (window.confirm('Вы действительно хотите очистить корзину?')) {
       dispatch(clearCart());
     }
-  };
+  }; */
 
   const onRemoveItem = (id) => {
     if (window.confirm('Вы действительно хотите удалить?')) {
@@ -43,7 +43,7 @@ function PopupWithCart({ isOpen, closePopup, handleAddItemToCart }) {
   };
 
   const onClickOrder = () => {
-    console.log('ВАШ ЗАКАЗ', items);
+    console.log('ВАШ ЗАКАЗ', cartItems);
   };
 
   function handleSubmit(evt) {
@@ -69,8 +69,8 @@ function PopupWithCart({ isOpen, closePopup, handleAddItemToCart }) {
                 <CartItem
                   item={item}
                   key={item.id}
-                  price={items[item.id].totalPrice}
-                  total={items[item.id].items.length}
+                  price={cartItems[item.id].totalPrice}
+                  total={cartItems[item.id].cartItems.length}
                   removeItem={onRemoveItem}
                   plusItem={onPlusItem}
                   minusItem={onMinusItem}
@@ -81,7 +81,6 @@ function PopupWithCart({ isOpen, closePopup, handleAddItemToCart }) {
               <p className="popup__form-text">Позиций в корзине: {totalCount} шт.</p>
               <p className="popup__form-text">К оплате: {totalPrice} р.</p>
               <button
-                type="submit"
                 disabled={!totalPrice}
                 className={`popup__submit-button ${!totalPrice && 'popup__submit-button_type_disabled'}`}
               >

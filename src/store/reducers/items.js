@@ -1,5 +1,5 @@
 const initialState = {
-  isLoading: false,
+  isLoading: true,
   items: [],
   filterBy: 'all',
 };
@@ -10,14 +10,16 @@ export const items = (state = initialState, action) => {
     case 'SET_ITEMS':
       return {
         ...state,
-        items: [...state.items, action.payload],
+        items: action.payload,
+        isLoading: false,
       };
     // загрузить картинки в каталог с сервера
     case 'SET_LOADED':
       return {
         ...state,
+        isLoading: false,
         items: action.payload,
-        isLoading: true,
+
       };
           // фильтр по продуктам
     case 'SET_FILTER':
@@ -25,6 +27,10 @@ export const items = (state = initialState, action) => {
         ...state,
         filterBy: action.payload,
       };
+
+                // тест
+    case 'DECREMENT':
+      return console.log(state)
     default:
       return state;
   }

@@ -7,12 +7,11 @@
   max-width: 1240px;
   min-height: 100vh;
   font-family: 'Inter', sans-serif, Arial;
-  color: #fff;
+  color: white;
   text-rendering: optimizeLegibility;
-  overflow-y: scroll;
   display: flex;
   flex-direction: column;
-  background: url(../../images/experiment1.jpg) center no-repeat;
+  background: url(../../images/experiment2.jpg) center no-repeat;
   background-size: cover;
   background-position: 50%;
   background-attachment: fixed;

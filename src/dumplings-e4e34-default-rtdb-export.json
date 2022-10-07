@@ -1,0 +1,211 @@
+{
+  "Menu": [
+    {
+      "description": "Перцы, помидоры, лук и зелень тушатся вместе, а после соединяются с жареными баклажанами",
+      "image": "https://eda.ru/img/eda/c620x415/s1.eda.ru/StaticContent/Photos/120705181646/120719195730/p_O.jpg",
+      "price": 300,
+      "title": "Аджапсандали",
+      "weight": 200,
+      "id": 1001,
+      "category": "HotDishes"
+    },
+    {
+      "description": "Мясо (говядина или телятина) тушенное в томатном соке",
+      "image": "https://img1.russianfood.com/dycontent/images_upl/462/big_461037.jpg",
+      "price": 300,
+      "title": "Чашушули",
+      "weight": 200,
+      "id": 1002,
+      "category": "HotDishes"
+    },
+    {
+      "description": "Мясо с картошкой, простое блюдо грузинской кухни для всей семьи.",
+      "image": "https://www.edimdoma.ru/data/recipes/0014/7848/147848-ed4_wide.jpg?1637242523",
+      "price": 300,
+      "title": "Оджахури",
+      "weight": 200,
+      "id": 1003,
+      "category": "HotDishes"
+    },
+    {
+      "description": "Тушёная курица с луком, помидорами, сладким перцем.",
+      "image": "https://www.gastronom.ru/binfiles/images/20170615/b9c7b94e.jpg",
+      "price": 300,
+      "title": "Чахохбили по-грузински",
+      "weight": 200,
+      "id": 1004,
+      "category": "HotDishes"
+    },
+    {
+      "description": "Аджарский хачапури в виде лодочки с сыром и яйцом.",
+      "image": "https://www.maggi.ru/data/images/recept/img640x500/recept_3683_2ta8.jpg",
+      "price": 400,
+      "title": "Хачапури по-аджарски",
+      "weight": 300,
+      "id": 1005,
+      "category": "HotDishes"
+    },
+    {
+      "description": "Мясной фарш с рисом завёрнутые в виноградные листья",
+      "image": "https://img.freepik.com/free-photo/grape-leaves-dolma-minced-meat-grape-leaves-plain-youghurt-spices-top-view_141793-4443.jpg?t=st=1653925594~exp=1653926194~hmac=374b24d22fa0695479e62bea6c52903b881969899f775daba999e7ab67d0dcc7&w=740",
+      "price": 300,
+      "title": "Долма в виноградных листьях",
+      "weight": 200,
+      "id": 1006,
+      "category": "HotDishes"
+    },
+    {
+      "description": "Суп из говядины с орехами, баранины, свинины, курицы, ароматной зелени и тклапи",
+      "image": "https://static.1000.menu/img/content/26995/sup-xarcho-iz-svininy-s-risom_1526225078_14_max.jpg",
+      "price": 300,
+      "title": "Суп-харчо",
+      "weight": 300,
+      "id": 1101,
+      "category": "Soup"
+    },
+    {
+      "description": "Баранина, смягченная кислотой и вкусом алычи",
+      "image": "https://eda.ru/img/eda/c620x415/s1.eda.ru/StaticContent/Photos/170228105509/191129131024/p_O.jpg",
+      "price": 300,
+      "title": "Чакапули",
+      "weight": 300,
+      "id": 1102,
+      "category": "Soup"
+    },
+    {
+      "description": "Готовится из говяжьих ножек",
+      "image": "https://static.1000.menu/res/640/img/content/28503/armyanskii-xash_1535332023_1_max.jpg",
+      "price": 300,
+      "title": "Хаши",
+      "weight": 300,
+      "id": 1103,
+      "category": "Soup"
+    }
+  ],
+  "Cart": [
+    {
+      "image": "https://eda.ru/img/eda/c620x415/s1.eda.ru/StaticContent/Photos/120705181646/120719195730/p_O.jpg",
+      "price": 300,
+      "title": "Аджапсандали",
+      "weight": 200,
+      "id": 1001,
+      "total": 0
+    },
+    {
+      "description": "Мясо (говядина или телятина) тушенное в томатном соке",
+      "image": "https://img1.russianfood.com/dycontent/images_upl/462/big_461037.jpg",
+      "price": 300,
+      "title": "Чашушули",
+      "weight": 200,
+      "id": 1002,
+      "total": 0
+    },
+    {
+      "description": "Мясо с картошкой, простое блюдо грузинской кухни для всей семьи.",
+      "image": "https://www.edimdoma.ru/data/recipes/0014/7848/147848-ed4_wide.jpg?1637242523",
+      "price": 300,
+      "title": "Оджахури",
+      "weight": 200,
+      "id": 1003,
+      "total": 0
+    },
+    {
+      "description": "Тушёная курица с луком, помидорами, сладким перцем.",
+      "image": "https://www.gastronom.ru/binfiles/images/20170615/b9c7b94e.jpg",
+      "price": 300,
+      "title": "Чахохбили по-грузински",
+      "weight": 200,
+      "id": 1004,
+      "total": 0
+    },
+    {
+      "description": "Аджарский хачапури в виде лодочки с сыром и яйцом.",
+      "image": "https://www.maggi.ru/data/images/recept/img640x500/recept_3683_2ta8.jpg",
+      "price": 400,
+      "title": "Хачапури по-аджарски",
+      "weight": 300,
+      "id": 1005,
+      "total": 0
+    },
+    {
+      "description": "Мясной фарш с рисом завёрнутые в виноградные листья",
+      "image": "https://img.freepik.com/free-photo/grape-leaves-dolma-minced-meat-grape-leaves-plain-youghurt-spices-top-view_141793-4443.jpg?t=st=1653925594~exp=1653926194~hmac=374b24d22fa0695479e62bea6c52903b881969899f775daba999e7ab67d0dcc7&w=740",
+      "price": 300,
+      "title": "Долма в виноградных листьях",
+      "weight": 200,
+      "id": 1006,
+      "total": 0
+    },
+    {
+      "description": "Суп из говядины с орехами, баранины, свинины, курицы, ароматной зелени и тклапи",
+      "image": "https://static.1000.menu/img/content/26995/sup-xarcho-iz-svininy-s-risom_1526225078_14_max.jpg",
+      "price": 300,
+      "title": "Суп-харчо",
+      "weight": 300,
+      "id": 1101,
+      "total": 0
+    },
+    {
+      "description": "Баранина, смягченная кислотой и вкусом алычи",
+      "image": "https://eda.ru/img/eda/c620x415/s1.eda.ru/StaticContent/Photos/170228105509/191129131024/p_O.jpg",
+      "price": 300,
+      "title": "Чакапули",
+      "weight": 300,
+      "id": 1102,
+      "total": 0
+    },
+    {
+      "description": "Готовится из говяжьих ножек",
+      "image": "https://static.1000.menu/res/640/img/content/28503/armyanskii-xash_1535332023_1_max.jpg",
+      "price": 300,
+      "title": "Хаши",
+      "weight": 300,
+      "id": 1103,
+      "total": 0
+    }
+  ],
+  "Slider": [
+    {
+      "description": "Уютные столики на втором этаже",
+      "image": "https://img.freepik.com/free-photo/cafe-terrace-with-turquoise-sofas-and-yellow-pillows_140725-2484.jpg?w=740&t=st=1665068863~exp=1665069463~hmac=e84a528b18ed82ab9622178df20ab991b04f708d72555b200b1cd9fd11027328",
+      "alt": "второй этаж",
+      "id": 2001
+    },
+    {
+      "description": "Солнечный первый этаж",
+      "image": "https://img.freepik.com/free-photo/interior-shot-of-a-cafe-with-chairs-near-the-bar-with-wooden-tables_181624-1669.jpg?w=996&t=st=1665068815~exp=1665069415~hmac=0e1d18e84600c982c5da36b01b8e7100b0fafc8fceff8acba556818a99c3b31f",
+      "alt": "первый этаж",
+      "id": 2002
+    },
+    {
+      "description": "Кофе зона для работы",
+      "image": "https://img.freepik.com/free-photo/people-at-the-coffee-shop_53876-47028.jpg?w=996&t=st=1665068838~exp=1665069438~hmac=5f15cb5399c4ef5e886ba5f16530daba309c24048351a77dc36e71a68da09cbd",
+      "alt": "кофе зона",
+      "id": 2003
+    },
+    {
+      "description": "Проведение банкетов",
+      "image": "https://img.freepik.com/premium-photo/restaurant-chilling-out-classy-lifestyle-reserved-concept_53876-56820.jpg?w=1060",
+      "alt": "банкеты",
+      "id": 2004
+    },
+    {
+      "description": "Уличная терраса",
+      "image": "https://img.freepik.com/free-photo/color-breakfast-outdoors-glass-white_1127-2375.jpg?w=996&t=st=1665069295~exp=1665069895~hmac=32575f9c32f6bf23eb371afe9d5819cb48005ea0f465c65c856a432bd919c32f",
+      "alt": "терраса",
+      "id": 2005
+    },
+    {
+      "description": "Вкусные завтраки с кофе и свежими круассанами со сливочным маслом",
+      "image": "https://img.freepik.com/free-photo/delicious-breakfast-with-fresh-croissants-and-coffee-served-with-butter_1150-37776.jpg?w=996&t=st=1665069360~exp=1665069960~hmac=e30f511fb68227005475000349dafa48992196ced4eea503237771caf38e3ac6",
+      "alt": "завтраки",
+      "id": 2006
+    },
+    {
+      "description": "Каждый день свежая выпечка",
+      "image": "https://img.freepik.com/free-photo/female-baker-presenting-the-various-pastries-in-the-transparent-display-cabinet_23-2148028029.jpg?w=996&t=st=1665069489~exp=1665070089~hmac=508ca6c3adb1cf78abbd51dd57e07287987af9d03ed8556b01a9b6d51c1d2d68",
+      "alt": "выпечка",
+      "id": 2007
+    }
+  ]
+}

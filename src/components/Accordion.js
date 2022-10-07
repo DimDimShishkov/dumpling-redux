@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import Card from './Card';
 
 function Accordion({ title, cards, addToCart, onCardClick, removeFromCart }) {
-  const [isOpenAccordion, setOpenAccordion] = useState(null);
+  const [isOpenAccordion, setOpenAccordion] = useState(false);
+
   return (
     <div className="menu__accordion-item">
       <div className="menu__accordion-head" onClick={() => setOpenAccordion(!isOpenAccordion)}>
@@ -14,7 +15,7 @@ function Accordion({ title, cards, addToCart, onCardClick, removeFromCart }) {
           className={`menu__accordion-content 
               ${'menu__accordion-content_active'}`}
         >
-          {cards.map((card) => {
+          {cards?.map((card) => {
             return (
               <Card
                 card={card}

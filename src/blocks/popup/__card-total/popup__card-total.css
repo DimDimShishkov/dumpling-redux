@@ -1,0 +1,9 @@
+.popup__card-total {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: azure;
+  border-radius: 10px;
+  height: 30px;
+  margin-left: auto;
+}

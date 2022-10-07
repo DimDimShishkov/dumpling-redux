@@ -13,57 +13,8 @@
   gap: 10px;
 }
 
-.card__title {
-  font-size: 15px;
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
-}
 
-.card__image {
-  width: 100%;
-  height: 200px;
-  margin: 0;
-  padding: 0;
-  margin-top: auto;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 6px;
-}
 
-.card__content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.card__cart-button {
-  font-size: 15px;
-  font-weight: 400;
-  margin: 0;
-  padding: 5px;
-  border: 1px solid black;
-  border-radius: 5px;
-  background-color: black;
-  color: #fff;
-}
 
-.card__total {
-  display: flex;
-  flex-direction: row;
-}
 
-.card__price {
-  font-weight: 700;
-  font-size: 17px;
-  margin: 0;
-  padding: 0;
-}
-
-.card__weight {
-  font-size: 15px;
-  font-weight: 400;
-  margin: 0;
-  padding: 0;
-}

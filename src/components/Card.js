@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { minusCartItem, addToCart } from '../store/actions/cart';
 
 function Card({ onCardClick, card, addToCart, removeFromCart }) {
-  const { totalPrice, totalCount, items } = useSelector(({ cart }) => cart);
+  const { totalPrice, totalCount, cartItems } = useSelector(({ cart }) => cart);
   const { price, title, weight, image } = card;
   const dispatch = useDispatch();
-  const [cardItem, setCardItem] = useState(null);
 
   const plusItem = (item) => {
     dispatch(addToCart(item));
@@ -27,17 +26,18 @@ function Card({ onCardClick, card, addToCart, removeFromCart }) {
   function handleFromCart() {
     removeFromCart(card);
   }
+  console.log(cartItems[card.id]);
 
   let orderButton;
 
   (function buttonsChange() {
-    if (items[card.id]) {
+    if (cartItems[card.id]) {
       orderButton = (
         <div className="popup__card-total">
           <button className="popup__card-button" onClick={handleFromCart}>
             -
           </button>
-          <p className="popup__card-heading">{items[card.id].items.length}</p>
+          <p className="popup__card-heading">{cartItems[card.id].cartItems.length}</p>
           <button className="popup__card-button" onClick={handleToCart}>
             +
           </button>

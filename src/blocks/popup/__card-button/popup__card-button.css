@@ -1,0 +1,7 @@
+.popup__card-button {
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  width: 30px;
+  background-color: azure;
+}

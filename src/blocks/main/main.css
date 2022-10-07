@@ -4,6 +4,7 @@
   flex-direction: row;
   justify-content: space-between;
   box-sizing: border-box;
+  align-items: center;
 }
 
 @media screen and (max-width: 900px) {
@@ -11,5 +12,6 @@
     flex-direction: column;
     width: 100%;
     padding: 100px 20px 0;
+    gap: 20px;
   }
 }

@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { api } from './api';
-import Card from './Card';
 import Loading from './Loading';
 import { setItems } from '../store/actions/items';
 import { addToCart, minusCartItem } from '../store/actions/cart';
@@ -13,23 +11,26 @@ function Menu() {
   const dispatch = useDispatch();
   // const [HotDishes, setHotDishes] = useState(null);
   const items = useSelector(({ items }) => items.items);
+  const isLoading = useSelector(({ items }) => items.isLoading);
   /*  const cartItems = useSelector(({ cart }) => cart.items); */
-  const [isOpenAccordion, setOpenAccordion] = useState(null);
-  const [loading, setLoading] = useState(true);
   const [selectedCard, setSelectedCard] = useState(null);
-  const [isOpenCart, setOpenCart] = useState(null);
+  const [isOpenCart, setOpenCart] = useState(null); // set приставка поправить
   const { totalPrice, totalCount } = useSelector(({ cart }) => cart);
 
-  useEffect(() => {
+  /*   useEffect(() => {
     api
       .handleDownloadAll()
       .then((res) => {
-        dispatch(setItems(res));
+        dispatch(setItems(res)); // переделать компонент в глупый 
       })
       .catch((err) => {
         console.log(err);
       })
       .finally(() => setLoading(false));
+  }, []); */
+
+  useEffect(() => {
+    dispatch(setItems());
   }, []);
 
   const handleClick = (card) => {
@@ -52,36 +53,39 @@ function Menu() {
   const handleOpenCart = () => {
     setOpenCart(true);
   };
-  
+
   return (
     <section className="main">
       <div className="menu">
-        <div className="menu__cart-container" onClick={handleOpenCart}>
-          <button className="menu__cart-button" type="button"></button>
+        <div className="menu__cart-container">
+          <button className="menu__cart-button" type="button" onClick={handleOpenCart}></button>
           <div className="menu__cart-text">
-            <p className="menu__cart-heading">{items ? `Позиций в корзине ${totalCount}` : 'В корзине нет картинок'}</p>
-            <p className="menu__cart-subheading">{items ? `К оплате ${totalPrice} рублей` : ''}</p>
+            <p className="menu__cart-heading">
+              {totalCount ? `Позиций в корзине ${totalCount}` : 'В корзине нет товаров'}
+            </p>
+            <p className="menu__cart-subheading">{totalCount ? `К оплате ${totalPrice} рублей` : ''}</p>
           </div>
         </div>
-        
-        {loading ? (
+
+        {isLoading ? (
           <Loading />
         ) : (
           <div className="menu__accordion">
             <Accordion
               title={'Горячие блюда'}
-              cards={items[0].HotDishes}
+              cards={items?.filter((item) => item.category === 'HotDishes')}
               onCardClick={handleClick}
               addToCart={handleAddItemToCart}
               removeFromCart={handleRemoveItemFromCart}
             />
-{/*             <Accordion
+
+            <Accordion
               title={'Супы'}
-              cards={items[0].Soup}
+              cards={items?.filter((item) => item.category === 'Soup')}
               onCardClick={handleClick}
               addToCart={handleAddItemToCart}
               removeFromCart={handleRemoveItemFromCart}
-            /> */}
+            />
           </div>
         )}
       </div>

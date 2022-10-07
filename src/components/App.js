@@ -23,7 +23,6 @@ function App() {
         <Route path="/dumpling-redux/contacts" element={<Contacts />}></Route>
         <Route path="/dumpling-redux/menu" element={<><Menu /></>}></Route>
         <Route path="/dumpling-redux/about-us" element={<><NoPage /></>}></Route>
-        <Route path="/dumpling-redux/our-team" element={<><NoPage /></>}></Route>
         <Route path="/dumpling-redux/gallery" element={<><NoPage /></>}></Route>
       </Routes>
 

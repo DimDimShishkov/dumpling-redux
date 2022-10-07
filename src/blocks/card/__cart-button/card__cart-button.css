@@ -1,0 +1,10 @@
+.card__cart-button {
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: black;
+  color: #fff;
+}

@@ -1,0 +1,14 @@
+.popup__card-heading {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  overflow-wrap: break-word;
+  max-width: 220px;
+}
+
+@media screen and (max-width: 460px) {
+  .popup__card-heading {
+    font-size: 12px;
+    max-width: 100px;
+  }
+}

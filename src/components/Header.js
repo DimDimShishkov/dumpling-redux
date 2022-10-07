@@ -27,9 +27,6 @@ function Header({pageState}) {
             <Link to="/dumpling-redux/about-us" className="header__link">
               О нас
             </Link>
-            <Link to="/dumpling-redux/our-team" className="header__link">
-              Наша команда
-            </Link>
             <Link to="/dumpling-redux/menu" className="header__link">
               Меню
             </Link>
