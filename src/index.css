@@ -69,7 +69,7 @@
 @import url(./blocks/popup/__card-subheading/popup__card-subheading.css);
 @import url(./blocks/popup/__card-total/popup__card-total.css);
 @import url(./blocks/popup/__card-button/popup__card-button.css);
-
+@import url(./blocks/slider/slider.css);
 
 
 #root {

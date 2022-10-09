@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart, minusCartItem, removeCartItem } from '../store/actions/cart';
+import { addToCart, minusCartItem, removeCartItem } from '../../store/actions/cart';
 import CartItem from './CartItem';
 
 function PopupWithCart({ isOpen, closePopup }) {

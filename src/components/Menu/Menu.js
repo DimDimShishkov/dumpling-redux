@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart, minusCartItem, setCartItems } from '../store/actions/cart';
-import { setItems } from '../store/actions/items';
+import { addToCart, minusCartItem, setCartItems } from '../../store/actions/cart';
+import { setItems } from '../../store/actions/items';
 import Accordion from './Accordion';
 import Loading from './Loading';
 import PopupWithCart from './PopupWithCart';
