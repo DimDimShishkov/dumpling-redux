@@ -1,19 +1,9 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { minusCartItem, addToCart } from '../store/actions/cart';
+import { useSelector } from 'react-redux';
 
 function Card({ onCardClick, card, addToCart, removeFromCart }) {
-  const { totalPrice, totalCount, cartItems } = useSelector(({ cart }) => cart);
+  const { cartItems } = useSelector(({ cart }) => cart);
   const { price, title, weight, image } = card;
-  const dispatch = useDispatch();
-
-  const plusItem = (item) => {
-    dispatch(addToCart(item));
-  };
-
-  const minusItem = (item) => {
-    dispatch(minusCartItem(item));
-  };
 
   function handleClick() {
     onCardClick(card);
@@ -26,31 +16,28 @@ function Card({ onCardClick, card, addToCart, removeFromCart }) {
   function handleFromCart() {
     removeFromCart(card);
   }
-  console.log(cartItems[card.id]);
-
+  const thisCard = cartItems.find((el) => el.id === card.id).total;
   let orderButton;
 
-  (function buttonsChange() {
-    if (cartItems[card.id]) {
-      orderButton = (
-        <div className="popup__card-total">
-          <button className="popup__card-button" onClick={handleFromCart}>
-            -
-          </button>
-          <p className="popup__card-heading">{cartItems[card.id].cartItems.length}</p>
-          <button className="popup__card-button" onClick={handleToCart}>
-            +
-          </button>
-        </div>
-      );
-    } else {
-      orderButton = (
-        <button className="card__cart-button" onClick={handleToCart}>
-          В корзину
+  if (thisCard) {
+    orderButton = (
+      <div className="popup__card-total">
+        <button className="popup__card-button" onClick={handleFromCart}>
+          -
         </button>
-      );
-    }
-  })();
+        <p className="popup__card-heading">{thisCard}</p>
+        <button className="popup__card-button" onClick={handleToCart}>
+          +
+        </button>
+      </div>
+    );
+  } else {
+    orderButton = (
+      <button className="card__cart-button" onClick={handleToCart}>
+        В корзину
+      </button>
+    );
+  }
 
   return (
     <article className="card">

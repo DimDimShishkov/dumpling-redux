@@ -1,36 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import Loading from './Loading';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToCart, minusCartItem, setCartItems } from '../store/actions/cart';
 import { setItems } from '../store/actions/items';
-import { addToCart, minusCartItem } from '../store/actions/cart';
 import Accordion from './Accordion';
-import PopupWithImage from './PopupWithImage';
+import Loading from './Loading';
 import PopupWithCart from './PopupWithCart';
+import PopupWithImage from './PopupWithImage';
 
 function Menu() {
   const dispatch = useDispatch();
-  // const [HotDishes, setHotDishes] = useState(null);
   const items = useSelector(({ items }) => items.items);
   const isLoading = useSelector(({ items }) => items.isLoading);
-  /*  const cartItems = useSelector(({ cart }) => cart.items); */
   const [selectedCard, setSelectedCard] = useState(null);
   const [isOpenCart, setOpenCart] = useState(null); // set приставка поправить
   const { totalPrice, totalCount } = useSelector(({ cart }) => cart);
 
-  /*   useEffect(() => {
-    api
-      .handleDownloadAll()
-      .then((res) => {
-        dispatch(setItems(res)); // переделать компонент в глупый 
-      })
-      .catch((err) => {
-        console.log(err);
-      })
-      .finally(() => setLoading(false));
-  }, []); */
-
   useEffect(() => {
     dispatch(setItems());
+    dispatch(setCartItems());
   }, []);
 
   const handleClick = (card) => {
@@ -91,7 +78,7 @@ function Menu() {
       </div>
 
       <PopupWithImage card={selectedCard} closePopup={closePopups} />
-      <PopupWithCart isOpen={isOpenCart} closePopup={closePopups} handleAddItemToCart={handleAddItemToCart} />
+      <PopupWithCart isOpen={isOpenCart} closePopup={closePopups} />
     </section>
   );
 }

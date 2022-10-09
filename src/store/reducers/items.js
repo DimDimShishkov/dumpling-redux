@@ -13,14 +13,15 @@ export const items = (state = initialState, action) => {
         items: action.payload,
         isLoading: false,
       };
-    // загрузить картинки в каталог с сервера
+
+    // загрузить с сервера test
     case 'SET_LOADED':
       return {
         ...state,
         isLoading: false,
         items: action.payload,
-
       };
+      
           // фильтр по продуктам
     case 'SET_FILTER':
       return {
@@ -28,9 +29,6 @@ export const items = (state = initialState, action) => {
         filterBy: action.payload,
       };
 
-                // тест
-    case 'DECREMENT':
-      return console.log(state)
     default:
       return state;
   }
