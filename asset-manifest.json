@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dumpling-redux/static/css/main.6ed73f08.css",
-    "main.js": "/dumpling-redux/static/js/main.3d25b484.js",
+    "main.css": "/dumpling-redux/static/css/main.d383e09e.css",
+    "main.js": "/dumpling-redux/static/js/main.adfe2e4f.js",
     "static/media/experiment2.jpg": "/dumpling-redux/static/media/experiment2.5a9341a79fc4451f9cb6.jpg",
     "static/media/Inter-Medium.woff?v=3.19": "/dumpling-redux/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
     "static/media/Inter-Black.woff?v=3.19": "/dumpling-redux/static/media/Inter-Black.c6938660eec019fefd68.woff",
@@ -16,11 +16,11 @@
     "index.html": "/dumpling-redux/index.html",
     "static/media/CloseIconDesctop.svg": "/dumpling-redux/static/media/CloseIconDesctop.039f1f5203f653b4bacd.svg",
     "static/media/CloseIconMobile.svg": "/dumpling-redux/static/media/CloseIconMobile.622e8cdafa2222aa7c54.svg",
-    "main.6ed73f08.css.map": "/dumpling-redux/static/css/main.6ed73f08.css.map",
-    "main.3d25b484.js.map": "/dumpling-redux/static/js/main.3d25b484.js.map"
+    "main.d383e09e.css.map": "/dumpling-redux/static/css/main.d383e09e.css.map",
+    "main.adfe2e4f.js.map": "/dumpling-redux/static/js/main.adfe2e4f.js.map"
   },
   "entrypoints": [
-    "static/css/main.6ed73f08.css",
-    "static/js/main.3d25b484.js"
+    "static/css/main.d383e09e.css",
+    "static/js/main.adfe2e4f.js"
   ]
 }
