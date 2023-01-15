@@ -1,5 +1,7 @@
 # Лендинг для кафе: «Хинкальная»
 
+![image](https://raw.githubusercontent.com/DimDimShishkov/dumpling-redux/main/dumplings.gif)
+
 ### Обзор
 
 - Описание
